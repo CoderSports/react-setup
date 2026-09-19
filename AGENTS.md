@@ -18,3 +18,13 @@ For validation:
 4. Do not consume GitHub Actions minutes merely to obtain CI evidence.
 
 GitHub remains the source-control/review system; this rule concerns **where compute-heavy CI/build/test/deploy work runs**.
+
+
+<!-- CODERSPORTS_SELF_HOSTED_CI_POLICY -->
+## CoderSports CI/build execution policy
+
+Do **not** use GitHub Actions or GitHub-hosted workflows for development builds, tests, validation, image builds, packaging, or deployments unless a human explicitly overrides this rule for the specific task.
+
+Use CoderSports-managed VM/container capacity instead, including Deb55, Deb54, Coder Sports 51, x.53/dedicated builders, or another explicitly provisioned CoderSports host appropriate to the project. Prefer isolated worktrees/clean exact-SHA checkouts and pinned containers where practical. Preserve useful validation logs/evidence through the repository's normal evidence mechanism.
+
+GitHub remains the source-control and review system; this rule governs where build/test/validation/deployment compute runs.
